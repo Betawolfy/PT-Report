@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTReport - Generator</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
+    <link rel="shortcut icon" href="/assets/favicon/icon.ico" type="image/x-icon">
+
+    <meta content="PTReport" property="og:title" />
+    <meta content="Make a report easily, then send it!" property="og:description" />
+    <meta content="https://embed.com/this-is-the-site-url" property="og:url" />
+    <meta content="" property="og:image" />
+    <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" class="active">Report</a></li>
+            <!-- <li><a href="/doc/guide/">Guide</a></li> -->
+            <li><a href="/doc/about/">About</a></li>
+            <li><a href="#"></a></li>
+        </ul>
+        <button class="menu-toggle">⚙️</button>
+    </nav>
+
+    <div class="container">
+        <h1>PonyTown Reporter</h1>
+        <p>This form is here to help you making a complete reporting template to send to ponytown's moderation mail.</p>
+        <p><strong>Need a guide?</strong> read it <a href="/doc/guide/">here</a>.</p>
+        <form id="reportForm">
+
+            <!-- <label for="reportType">Quote the rule/problem:</label>
+            <input type="text" id="reportType" name="reportType" required> -->
+
+            <label for="reportDesc">Consise description:</label>
+            <p class="left-text">Give as much information as possible about the problem you are reporting</p>
+            <textarea id="reportDesc" name="reportDesc"
+                placeholder="Enter what happened here. Please remember to have common sence." required></textarea>
+
+            <label for="accountId">Account ID</label>
+            <p class="left-text">Your ponytown ID can be found in <a href="https://pony.town/account"
+                    class="bold-text italic-text">Account settings page</a>.</p>
+            <input type="text" id="accountId" name="accountId" placeholder="Your ponytown ID" required>
+
+            <label for="hiddenUser">Hided user name:</label>
+            <p class="left-text">The user you are reporting, if you don't know their name, you can find it in the
+                chatlog or in your hide list in <a class="bold-text italic-text"
+                    href="https://pony.town/account">Account settings page</a> below the <span
+                    class="bold-text italic-text">Redeem Boosty code</span> section.</p>
+            <input type="text" id="hiddenUser" name="hiddenUser" placeholder="The user you are reporting." required>
+
+            <label for="messageSent">Messages they sent:</label>
+            <p class="left-text">put here all messages that is breaking the rule:</p>
+            <textarea id="messageSent" name="messageSent"
+                placeholder="Make sure to include all messages that is breaking the rule." required></textarea>
+
+            <label for="relatedChatlog">Pasted chatlog / pictures:</label>
+            <p class="left-text">Copy paste the chatlog of what happened here. When you'll send your mail, don't forget
+                to include screenshots.</p>
+            <textarea id="relatedChatlog" name="relatedChatlog"></textarea>
+
+            <button type="submit">Generate the report</button>
+        </form>
+    </div>
+    <!-- Night mode toggle button -->
+    <button id="nightModeToggle">Night Mode</button>
+
+
+    <!-- Scripts, one general, one for darkmode -->
+    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/darkMode.js"></script>
+</body>
+
+</html>

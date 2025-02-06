@@ -1,0 +1,568 @@
+/* PTReporter CSS v0.1 */
+
+/* Font */
+@font-face {
+    font-family: 'Poppins';
+    src: url('/assets/font/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container */
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bigger-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiny face */
+
+.tinyFace {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.tinyFace::before {
+    content: "• c •";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.2s;
+}
+
+.tinyFace:hover::before {
+    content: "•`c´•";
+    color: #ff4444;
+}
+
+.tinyFace:hover {
+    animation: shake 0.1s infinite;
+    color: #ff4444;
+    transform-origin: center;
+}
+
+@keyframes shake {
+    0%, 100% { 
+        transform: rotate(0deg) rotateY(0deg);
+    }
+    25% { 
+        transform: rotate(-10deg) rotateY(30deg);
+    }
+    75% { 
+        transform: rotate(10deg) rotateY(-30deg);
+    }
+}
+
+/* Night mode */
+
+body.night-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.night-mode .container {
+    background: #444;
+    color: #fff;
+}
+
+body.night-mode h1, body.night-mode h2 {
+    color: #fff;
+}
+
+body.night-mode p {
+    color: #ccc;
+}
+
+body.night-mode label {
+    color: #ccc;
+}
+
+body.night-mode input[type="text"],
+body.night-mode textarea {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #777;
+}
+
+body.night-mode button[type="submit"] {
+    background-color: #0056b3;
+}
+
+body.night-mode button[type="submit"]:hover {
+    background-color: #003f7f;
+}
+
+#nightModeToggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+body.night-mode #nightModeToggle {
+    background-color: #0056b3;
+}
+
+body.night-mode .bigger-container {
+    background: #444;
+}
+
+/* Headings and texts */
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.smaller {
+    font-size: 14px;
+}
+
+/* Form */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Buttons */
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="copyButton"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="copyButton"]:hover {
+    background-color: #0056b3;
+}
+
+/* Colors */
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: lime;
+}
+
+.darkgreen {
+    color: darkgreen;
+}
+
+.blue {
+    color: blue;
+}
+
+.indigo {
+    color: indigo;
+}
+
+.violet {
+    color: violet;
+}
+
+.gray {
+    color: gray;
+}
+
+.white {
+    color: white;
+}
+
+/* Text settings */
+
+.left-text {
+    text-align: left;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.strike-text {
+    text-decoration: line-through;
+}
+
+.small-text {
+    font-size: 14px;
+}
+
+.smaller-text {
+    font-size: 12px;
+}
+
+.exposent {
+    vertical-align: super;
+    font-size: 0.5em;
+}
+
+.left {
+    text-align: left;
+}
+
+.centered {
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.reset-margin-bottom {
+    margin-bottom: 0;
+}
+
+/* top navbar */
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+.navbar ul li {
+    float: left;
+}
+
+.navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+    transform: translateY(-2px);
+}
+
+.navbar ul li a.active {
+    background-color: #575757;
+}
+
+/* Images (center images) */
+/* Making is vieable for mobile too */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .bigger-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    textarea {
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+
+    button[type="copyButton"] {
+        font-size: 14px;
+    }
+}
+
+/* Responsive navbar */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px; /* Ajusté pour un meilleur alignement vertical */
+    right: 20px;
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,0.3); /* Ajout d'une bordure subtile */
+    border-radius: 4px;
+    color: rgb(123, 123, 123);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Modifiez la media query existante */
+@media screen and (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%; /* Commence hors écran */
+        width: 100%;
+        height: 100vh;
+        background-color: #333;
+        padding-top: 60px;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .navbar.active ul {
+        left: 0; /* Arrive depuis la gauche */
+    }
+
+    .navbar ul li {
+        width: 100%;
+    }
+
+    .navbar ul li a {
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .navbar.active .menu-toggle {
+        transform: rotate(180deg);
+    }
+}
+
+/* Authors */
+.authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.author-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.author-card:hover {
+    transform: translateY(-5px);
+}
+
+.author-image {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.author-info {
+    flex: 1;
+}
+
+.author-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.author-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #007bff;
+}
+
+/* Dark mode support */
+body.night-mode .author-card {
+    background: #444;
+}
+
+body.night-mode .social-link {
+    color: #ccc;
+}
+
+body.night-mode .social-link:hover {
+    color: #4da6ff;
+}
+
+/* Roadmap */
+
+.roadmap-items {
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc; 
+}
+
+.roadmap-item {
+    margin-bottom: 30px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.checkedMarkIcon, .uncheckedMarkIcon {
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+.checkedMarkIcon {
+    color: #5cb85c;
+}
+
+.uncheckedMarkIcon {
+    color: #888;
+}
+
+.roadmap-item p {
+    margin: 5px 0;
+}
