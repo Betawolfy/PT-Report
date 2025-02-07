@@ -1,16 +1,19 @@
 const reportTemplate = `
-Dear PonyTown staff,
+Dear PonyTown staff,\n\n
 
-I'm contacting you to report a user who is violating the rules of Pony Town.
-(Tell us about your report here, Please provide as much proof and information of their violation as possible)
+I'm contacting you to report a user who is violating the rules of Pony Town.\n
+(Tell us about your report here, Please provide as much proof and information of their violation as possible)\n\n
 
-My account ID: 
+My account ID:\n\n
 
-Name of the hidden user:
+Name of the hidden user:\n\n
 
-A message that they sent: “ ”
+A message that they sent: “ ”\n\n
 
-Related chatlog/character images:
+Related chatlog/character images:\n\n
+
+Sincerly,\n
+Your name
 `;
 
 // Template builder
@@ -62,7 +65,7 @@ menuToggle.addEventListener('click', () => {
     navbar.classList.toggle('active');
 });
 
-// Fermer le menu quand on clique sur un lien
+// Close menu on link click
 document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', () => {
         navbar.classList.remove('active');

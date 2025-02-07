@@ -216,7 +216,8 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-button[type="copyButton"] {
+#copyButton,
+#createMailto {
     background-color: #007bff;
     color: white;
     border: none;
@@ -225,11 +226,28 @@ button[type="copyButton"] {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    display: block; /* Make them block-level elements */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    width: fit-content; /* Adjust width to content */
 }
 
-button[type="copyButton"]:hover {
+#copyButton:hover,
+#createMailto:hover {
     background-color: #0056b3;
 }
+
+body.night-mode #copyButton,
+body.night-mode #createMailto {
+    background-color: #0056b3;
+}
+
+body.night-mode #copyButton:hover,
+body.night-mode #createMailto:hover {
+    background-color: #003f7f;
+}
+
+
 
 /* Colors */
 
