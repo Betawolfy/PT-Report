@@ -3,16 +3,21 @@
   <url>
     <loc>https://pt-report.antivirusunite.com/</loc>
     <priority>1.0</priority>
-    <lastmod>2025-02-06</lastmod>
+    <lastmod>2025-02-07</lastmod>
   </url>
   <url>
     <loc>https://pt-report.antivirusunite.com/doc/about/</loc>
     <priority>0.8</priority>
-    <lastmod>2025-02-06</lastmod>
+    <lastmod>2025-02-07</lastmod>
+  </url>
+  <url>
+    <loc>https://pt-report.antivirusunite.com/doc/guide/</loc>
+    <priority>0.8</priority>
+    <lastmod>2025-02-07</lastmod>
   </url>
   <url>
     <loc>https://pt-report.antivirusunite.com/success/report.html</loc>
     <priority>0.6</priority>
-    <lastmod>2025-02-06</lastmod>
+    <lastmod>2025-02-07</lastmod>
   </url>
 </urlset>
