@@ -269,6 +269,10 @@ body.night-mode #createMailto:hover {
     color: red;
 }
 
+body.night-mode .red {
+    color: #ff4444;
+}
+
 .orange {
     color: orange;
 }
