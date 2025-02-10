@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Bug Report - Feature Request
+    url: https://github.com/Betawolfy/PT-Report/issues/new?assignees=betawolfy&labels=bug%2C+improvement%2C+question&template=issueForm.yml&title=%5BBug%5D%3A+
+    about: Use this form to report a bug or request a feature.
