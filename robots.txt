@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /success/report.html
+
+Sitemap: https://pt-report.antivirusunite.com/sitemap.xml
